@@ -12,6 +12,13 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		42A436484A3D4665BCBC918F /* NotoSansJP-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3F798C1641C44422ACABCC4F /* NotoSansJP-Black.otf */; };
+		14CF3739B9D246B48707858F /* NotoSansJP-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9A405D7A89F040F1BEBEBA78 /* NotoSansJP-Bold.otf */; };
+		EDC4B877784F45BC814E8F4B /* NotoSansJP-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = C49E9943301C438DBA149A7D /* NotoSansJP-Light.otf */; };
+		CEAECC3A606345B7AA61840D /* NotoSansJP-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 35F352FD85114789ADD971BE /* NotoSansJP-Medium.otf */; };
+		A1BC4214F2FC4068B19F9D95 /* NotoSansJP-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 71598059E8DC4DA4A33EB30E /* NotoSansJP-Regular.otf */; };
+		602729C7E3204FF9B45E5225 /* NotoSansJP-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 73B02F432B384FD98F3FA8F5 /* NotoSansJP-Thin.otf */; };
+		370F5C42EF7E429F8E35FADC /* PatrickHand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AE7EC36CA734EC99CC1EEE3 /* PatrickHand-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +43,13 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = t7framedata/main.m; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = t7framedata/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		3F798C1641C44422ACABCC4F /* NotoSansJP-Black.otf */ = {isa = PBXFileReference; name = "NotoSansJP-Black.otf"; path = "../assets/fonts/NotoSansJP-Black.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9A405D7A89F040F1BEBEBA78 /* NotoSansJP-Bold.otf */ = {isa = PBXFileReference; name = "NotoSansJP-Bold.otf"; path = "../assets/fonts/NotoSansJP-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C49E9943301C438DBA149A7D /* NotoSansJP-Light.otf */ = {isa = PBXFileReference; name = "NotoSansJP-Light.otf"; path = "../assets/fonts/NotoSansJP-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		35F352FD85114789ADD971BE /* NotoSansJP-Medium.otf */ = {isa = PBXFileReference; name = "NotoSansJP-Medium.otf"; path = "../assets/fonts/NotoSansJP-Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		71598059E8DC4DA4A33EB30E /* NotoSansJP-Regular.otf */ = {isa = PBXFileReference; name = "NotoSansJP-Regular.otf"; path = "../assets/fonts/NotoSansJP-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		73B02F432B384FD98F3FA8F5 /* NotoSansJP-Thin.otf */ = {isa = PBXFileReference; name = "NotoSansJP-Thin.otf"; path = "../assets/fonts/NotoSansJP-Thin.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6AE7EC36CA734EC99CC1EEE3 /* PatrickHand-Regular.ttf */ = {isa = PBXFileReference; name = "PatrickHand-Regular.ttf"; path = "../assets/fonts/PatrickHand-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +123,7 @@
 				00E356EF1AD99517003FC87E /* t7framedataTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				ED1C86D87B3F444BA4684E0D /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -123,6 +138,21 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
+		};
+		ED1C86D87B3F444BA4684E0D /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				3F798C1641C44422ACABCC4F /* NotoSansJP-Black.otf */,
+				9A405D7A89F040F1BEBEBA78 /* NotoSansJP-Bold.otf */,
+				C49E9943301C438DBA149A7D /* NotoSansJP-Light.otf */,
+				35F352FD85114789ADD971BE /* NotoSansJP-Medium.otf */,
+				71598059E8DC4DA4A33EB30E /* NotoSansJP-Regular.otf */,
+				73B02F432B384FD98F3FA8F5 /* NotoSansJP-Thin.otf */,
+				6AE7EC36CA734EC99CC1EEE3 /* PatrickHand-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -214,6 +244,13 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				42A436484A3D4665BCBC918F /* NotoSansJP-Black.otf in Resources */,
+				14CF3739B9D246B48707858F /* NotoSansJP-Bold.otf in Resources */,
+				EDC4B877784F45BC814E8F4B /* NotoSansJP-Light.otf in Resources */,
+				CEAECC3A606345B7AA61840D /* NotoSansJP-Medium.otf in Resources */,
+				A1BC4214F2FC4068B19F9D95 /* NotoSansJP-Regular.otf in Resources */,
+				602729C7E3204FF9B45E5225 /* NotoSansJP-Thin.otf in Resources */,
+				370F5C42EF7E429F8E35FADC /* PatrickHand-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

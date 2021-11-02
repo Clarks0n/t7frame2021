@@ -1,65 +1,66 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import { StatusBar, StyleSheet, Text, useColorScheme, View } from 'react-native';
+import { Colors, DebugInstructions, LearnMoreLinks, ReloadInstructions } from 'react-native/Libraries/NewAppScreen';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
-import {
-  Colors,
-  DebugInstructions,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
-import Header from './components/Header/Header';
 import Home from './screens/Home/Home';
+import Details from './screens/Details/Details';
+
+const Stack = createNativeStackNavigator();
+
+// const RootScreen = () => {
+//   return (
+//     <
+//   )
+// }
 
 const App = () => {
+  // const backgroundStyle = {
+  //   backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+  // };
+  
   const isDarkMode = useColorScheme() === 'dark';
 
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
+  const headerOptions = {
+    headerStyle: { backgroundColor: '#111111'},
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+      fontSize: 28,
+      fontFamily: "ZenKurenaido",
+      marginVertical: 12
+    },
+    headerTitleAlign: 'center'
+  }
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar 
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'} 
-        hidden={true}
-      />
-      <Header />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}
-      >
-        <Home />
-      </ScrollView>
-    </SafeAreaView>
+      <SafeAreaProvider>
+        <NavigationContainer>
+          <StatusBar 
+            barStyle={isDarkMode ? 'light-content' : 'dark-content'} 
+            // backgroundColor='#fff'
+            hidden={false}
+          />
+          <Stack.Navigator 
+            initialRouteName="Home" 
+            screenOptions={headerOptions}
+          >
+            <Stack.Screen 
+              name="Home" 
+              component={Home} 
+              options={{title: 'Characters List' }} 
+            />
+            <Stack.Screen 
+              name="Details" 
+              component={Details} 
+              options={({ route }) => ({ title: route.params.screenTitle })} 
+            />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </SafeAreaProvider>
+   
   );
 };
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
 
 export default App;

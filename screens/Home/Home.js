@@ -1,14 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { View, Text, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
-import Card from '../../components/Card/Card';
-import { AKUMA, ALISA } from '../../dataFrame';
+import Header from '../../components/Header/Header';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
-const Home = () => {
+const Home = ({navigation}) => {
     // const [charData] = useState([
-    //     {title: 'AKUMA', dataFrame: AKUMAFR, dataMeta:AKUMAME},
-    //     {title}
+    //     {title: 'AKUMA' },
+    //     {title: 'ALISA' },
+    //     {title: 'ANNA' },
+    //     {title: 'ARMOR KING' }
     // ]);
 
+    const num = 2;
 
     const charName = [
         'AKUMA','ALISA','ANNA','ARMOR KING','ASUKA','BOB','BRYAN','CLAUDIO','DEVIL JIN','DRAGUNOV','EDDY','ELIZA','FAHKUMRAM','FENG','GANRYU',
@@ -17,21 +20,66 @@ const Home = () => {
         'XIAOYU','YOSHIMITSU','ZAFINA'
     ];
 
-    useEffect(() => {
-        console.log(AKUMA)
-        console.log(ALISA)
-    },[])
+    const renderItem = ({ item }) => {
+        const Card = ({ item }) => (
+            <View style={styles.cardStyle} >
+                <TouchableOpacity 
+                    onPress={() => navigation.navigate('Details', { screenTitle: item})}
+                    style={[styles.item]}
+                >
+                    <Text style={[styles.title]}>{item}</Text>
+                </TouchableOpacity>
+            </View>
+        );
+    
+        return (
+          <Card
+            item={item}
+          />
+        );
+    };
 
     return (
-        <View>
-            <Card>
-                <Text>Bloop!!!</Text>
-            </Card>
-            <Card>
-                <Text>Bloop!!!</Text>
-            </Card>
-        </View>
+        <SafeAreaView 
+            style={styles.container}
+        >
+            {/* <Header /> */}
+            <FlatList
+                data={charName}
+                renderItem={renderItem}
+                numColumns={num}
+                key={num}
+                keyExtractor={(item) => item}
+                ListFooterComponent={<View />}
+                ListFooterComponentStyle={{height:125}}
+            />
+        </SafeAreaView>
     )
 }
+
+const styles = StyleSheet.create({
+    container: {
+        backgroundColor: '#111111',
+      },
+      item: {
+        padding: 10,
+        marginVertical: 4,
+        marginHorizontal: 6,
+        // transform: [{ skewX: '20deg' }] 
+      },
+      cardStyle: {
+        flex: 1,
+        marginVertical: 6,
+        marginHorizontal: 6,
+        backgroundColor: '#989898',
+        borderRadius: 6,
+      },
+      title: {
+        fontSize: 18,
+        color: '#ffff33',
+        alignSelf: 'center',
+        fontFamily: "PatrickHand",
+      },
+});
 
 export default Home

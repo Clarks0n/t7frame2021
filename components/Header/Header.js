@@ -7,7 +7,7 @@ import {
 
 const Header = () => {
     return (
-        <View>
+        <View style={styles.container}>
             <Text style={styles.headerText}>
                 Characters List
             </Text>
@@ -17,11 +17,15 @@ const Header = () => {
 
 
 const styles = StyleSheet.create({
+    container: {
+        backgroundColor: '#111111'
+    },
     headerText: {
-      fontSize: 24,
-      fontWeight: '600',
-      alignSelf: 'center',
-      fontFamily: 'NotoSansJP-Regular'
+        fontSize: 28,
+        alignSelf: 'center',
+        fontFamily: "ZenKurenaido",
+        color: 'white',
+        marginVertical: 12
     },
 });
 

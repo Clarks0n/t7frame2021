@@ -16,10 +16,9 @@ const Card = (props) => {
 const styles = StyleSheet.create({
     card: {
         flex: 1,
-        flexDirection: 'column',
         borderRadius: 6,
         elevation: 3,
-        backgroundColor: '#656565',
+        backgroundColor: '#6e3b6e',
         shadowOffset: {width: 1, height: 1},
         shadowColor: '#333',
         shadowOpacity: 0.3,

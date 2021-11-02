@@ -19,6 +19,8 @@
 		A1BC4214F2FC4068B19F9D95 /* NotoSansJP-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 71598059E8DC4DA4A33EB30E /* NotoSansJP-Regular.otf */; };
 		602729C7E3204FF9B45E5225 /* NotoSansJP-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 73B02F432B384FD98F3FA8F5 /* NotoSansJP-Thin.otf */; };
 		370F5C42EF7E429F8E35FADC /* PatrickHand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AE7EC36CA734EC99CC1EEE3 /* PatrickHand-Regular.ttf */; };
+		82F47582CA004E619F3C028A /* PatrickHand.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACCF31AC4CB444A5BFC81A87 /* PatrickHand.ttf */; };
+		D778FD3DCADF45E2B91551E8 /* ZenKurenaido.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 773B44EDEFCD4A57B483842F /* ZenKurenaido.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		71598059E8DC4DA4A33EB30E /* NotoSansJP-Regular.otf */ = {isa = PBXFileReference; name = "NotoSansJP-Regular.otf"; path = "../assets/fonts/NotoSansJP-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		73B02F432B384FD98F3FA8F5 /* NotoSansJP-Thin.otf */ = {isa = PBXFileReference; name = "NotoSansJP-Thin.otf"; path = "../assets/fonts/NotoSansJP-Thin.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		6AE7EC36CA734EC99CC1EEE3 /* PatrickHand-Regular.ttf */ = {isa = PBXFileReference; name = "PatrickHand-Regular.ttf"; path = "../assets/fonts/PatrickHand-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		ACCF31AC4CB444A5BFC81A87 /* PatrickHand.ttf */ = {isa = PBXFileReference; name = "PatrickHand.ttf"; path = "../assets/fonts/PatrickHand.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		773B44EDEFCD4A57B483842F /* ZenKurenaido.ttf */ = {isa = PBXFileReference; name = "ZenKurenaido.ttf"; path = "../assets/fonts/ZenKurenaido.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +153,8 @@
 				71598059E8DC4DA4A33EB30E /* NotoSansJP-Regular.otf */,
 				73B02F432B384FD98F3FA8F5 /* NotoSansJP-Thin.otf */,
 				6AE7EC36CA734EC99CC1EEE3 /* PatrickHand-Regular.ttf */,
+				ACCF31AC4CB444A5BFC81A87 /* PatrickHand.ttf */,
+				773B44EDEFCD4A57B483842F /* ZenKurenaido.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -251,6 +257,8 @@
 				A1BC4214F2FC4068B19F9D95 /* NotoSansJP-Regular.otf in Resources */,
 				602729C7E3204FF9B45E5225 /* NotoSansJP-Thin.otf in Resources */,
 				370F5C42EF7E429F8E35FADC /* PatrickHand-Regular.ttf in Resources */,
+				82F47582CA004E619F3C028A /* PatrickHand.ttf in Resources */,
+				D778FD3DCADF45E2B91551E8 /* ZenKurenaido.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

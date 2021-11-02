@@ -1,5 +1,5 @@
-export const ALISA = [{
-	"0": {
+export const ALISA = [
+	{
 		"typeId": "special",
 		"typeName": "Special moves",
 		"headers": [
@@ -1809,4 +1809,4 @@ export const ALISA = [{
 			]
 		]
 	}
-}]
+]

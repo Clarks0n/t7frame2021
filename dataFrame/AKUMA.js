@@ -1,5 +1,5 @@
-export const AKUMA = [{
-	"0": {
+export const AKUMA = [
+	{
 		"typeId": "special",
 		"typeName": "Special moves",
 		"headers": [
@@ -975,4 +975,4 @@ export const AKUMA = [{
 			]
 		]
 	}
-}]
+]

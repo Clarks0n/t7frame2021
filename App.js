@@ -1,20 +1,14 @@
 import React from 'react';
-import { StatusBar, StyleSheet, Text, useColorScheme, View } from 'react-native';
-import { Colors, DebugInstructions, LearnMoreLinks, ReloadInstructions } from 'react-native/Libraries/NewAppScreen';
+import { StatusBar, useColorScheme } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import Home from './screens/Home/Home';
 import Details from './screens/Details/Details';
 
 const Stack = createNativeStackNavigator();
 
-// const RootScreen = () => {
-//   return (
-//     <
-//   )
-// }
 
 const App = () => {
   // const backgroundStyle = {

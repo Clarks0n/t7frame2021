@@ -1,33 +1,20 @@
 import React from 'react';
 import { View, Text, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
-import Header from '../../components/Header/Header';
+// import Header from '../../components/Header/Header';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { charData } from '../../data';
 
 const Home = ({navigation}) => {
-    // const [charData] = useState([
-    //     {title: 'AKUMA' },
-    //     {title: 'ALISA' },
-    //     {title: 'ANNA' },
-    //     {title: 'ARMOR KING' }
-    // ]);
-
     const num = 2;
-
-    const charName = [
-        'AKUMA','ALISA','ANNA','ARMOR KING','ASUKA','BOB','BRYAN','CLAUDIO','DEVIL JIN','DRAGUNOV','EDDY','ELIZA','FAHKUMRAM','FENG','GANRYU',
-        'GEESE','GIGAS','HEIHACHI','HWOARANG','JACK-7','JIN','JOSIE','JULIA','KATARINA','KAZUMI','KAZUYA','KING','KUMA','KUNIMITSU','LARS','LAW',
-        'LEE','LEI','LEO','LEROY','LIDIA','LILI','LUCKY CHLOE','MARDUK','MASTER RAVEN','MIGUEL','NEGAN','NINA','NOCTIS','PAUL','SHAHEEN','STEVE',
-        'XIAOYU','YOSHIMITSU','ZAFINA'
-    ];
 
     const renderItem = ({ item }) => {
         const Card = ({ item }) => (
             <View style={styles.cardStyle} >
                 <TouchableOpacity 
-                    onPress={() => navigation.navigate('Details', { screenTitle: item})}
+                    onPress={() => navigation.navigate('Details', { screenTitle: item.title})}
                     style={[styles.item]}
                 >
-                    <Text style={[styles.title]}>{item}</Text>
+                    <Text style={[styles.title]}>{item.title}</Text>
                 </TouchableOpacity>
             </View>
         );
@@ -45,7 +32,7 @@ const Home = ({navigation}) => {
         >
             {/* <Header /> */}
             <FlatList
-                data={charName}
+                data={charData}
                 renderItem={renderItem}
                 numColumns={num}
                 key={num}

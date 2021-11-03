@@ -3,6 +3,7 @@ import { StatusBar, useColorScheme } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { Provider } from 'react-redux';
 
 import Home from './screens/Home/Home';
 import Details from './screens/Details/Details';
@@ -29,6 +30,7 @@ const App = () => {
   }
 
   return (
+    <Provider store={store} >
       <SafeAreaProvider>
         <NavigationContainer>
           <StatusBar 
@@ -53,7 +55,7 @@ const App = () => {
           </Stack.Navigator>
         </NavigationContainer>
       </SafeAreaProvider>
-   
+    </Provider>
   );
 };
 

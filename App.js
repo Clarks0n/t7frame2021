@@ -4,17 +4,19 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Provider } from 'react-redux';
+import { store } from './store/rootReducer';
 
-import Home from './screens/Home/Home';
-import Details from './screens/Details/Details';
+import Home from './screens/Home';
+import Details from './screens/Details';
 
 const Stack = createNativeStackNavigator();
 
-
 const App = () => {
-  // const backgroundStyle = {
-  //   backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  // };
+  /*
+  const backgroundStyle = {
+    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+  };
+  */
   
   const isDarkMode = useColorScheme() === 'dark';
 
@@ -27,7 +29,7 @@ const App = () => {
       marginVertical: 12
     },
     headerTitleAlign: 'center'
-  }
+  };
 
   return (
     <Provider store={store} >

@@ -3,24 +3,15 @@ import { View,StyleSheet, ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Table, TableWrapper, Row } from 'react-native-table-component';
 
-const Frame = (props) => {
+
+const Throw = (props) => {
     
     const data = props.route.params.data;
 
     const headers = data.headers;
     const moves = data.moves;
-    const widthArr = [120, 80, 80, 90, 90, 90, 90, 120];
+    const widthArr = [120, 80, 80, 90, 90, 90, 90];
 
-    /*
-    const tableData = [];
-    for (let i = 0; i < 30; i += 1) {
-      const rowData = [];
-      for (let j = 0; j < 9; j += 1) {
-        rowData.push(`${i}${j}`);
-      }
-      tableData.push(rowData);
-    }
-    */
     return (
         <SafeAreaView>
             <ScrollView horizontal={true}>
@@ -81,7 +72,7 @@ const styles = StyleSheet.create({
 });
 
 
-export default Frame
+export default Throw
 
 
 // checkIndexIsEven (n) {

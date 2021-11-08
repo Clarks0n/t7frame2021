@@ -1,8 +1,7 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import Frame from '../components/FrameScreen/Frame';
+import Throw from '../components/FrameScreen/Throw';
 import Guide from '../components/FrameScreen/Guide';
 
 const Tab = createMaterialTopTabNavigator();
@@ -28,7 +27,10 @@ const Details = ({route}) => {
 
     return (
         <Tab.Navigator screenOptions={screenOptions }>
-            <Tab.Screen name="Frame Data" component={Frame} initialParams={{ data: dataFrame  }} />
+            <Tab.Screen name="Frame Data" component={Frame} initialParams={{ data: dataFrame[0] }} />
+            {typeof dataFrame[1] !== 'undefined' && dataFrame[1].typeId === 'throws' ? 
+                <Tab.Screen name="Throw Data" component={Throw} initialParams={{ data: dataFrame[1] }} />
+            : null }
             <Tab.Screen name="Guide" component={Guide} initialParams={{ data: dataMeta }} />
         </Tab.Navigator>
     )

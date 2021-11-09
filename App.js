@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Provider } from 'react-redux';
 import { store } from './store/rootReducer';
+import RNBootSplash from "react-native-bootsplash";
 
 import Home from './screens/Home';
 import Details from './screens/Details';
@@ -17,7 +18,20 @@ const App = () => {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
   */
-  
+
+  /*
+  useEffect(() => {
+    const init = async () => {
+      // …do multiple sync or async tasks
+    };
+
+    init().finally(async () => {
+      await RNBootSplash.hide({ fade: true });
+      console.log("Bootsplash has been hidden successfully");
+    });
+  }, []);
+  */
+
   const isDarkMode = useColorScheme() === 'dark';
 
   const headerOptions = {
@@ -34,7 +48,7 @@ const App = () => {
   return (
     <Provider store={store} >
       <SafeAreaProvider>
-        <NavigationContainer>
+        <NavigationContainer onReady={() => RNBootSplash.hide()} >
           <StatusBar 
             barStyle={isDarkMode ? 'light-content' : 'dark-content'} 
             // backgroundColor='#fff'

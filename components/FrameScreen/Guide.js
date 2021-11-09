@@ -61,7 +61,6 @@ const Guide = (props) => {
     };
 
     const ComboLayout = ({title, data}) => {
-
         let combo = data.map((item) => {
             return item[0];
         });
@@ -73,35 +72,48 @@ const Guide = (props) => {
                 })
             )
         });
- 
+
         return (
             <>
             <View style={styles.card}> 
                 <Text style={styles.title}> 
                     {title}
                 </Text>
-                <View style={styles.cardContent}>
-                    <View style={styles.flexTwo}>
-                        <Text style={styles.punishTitle}>Starter</Text>
+                <Grid>
+                    <Col size={60}>
+                        <Text style={styles.punishTitle}> Startup</Text>
                         {starter.map((item,i) => {
                             return (
-                                <Text style={styles.txtCombo}>
-                                    {item}
-                                </Text>
+                                <Row style={styles.flexWrap}>
+                                    {/* <Text key={i} style={styles.txtEnders}>
+                                        {item.join(' * ')}
+                                    </Text> */}
+                                    {item.map((value,j) => {
+                                        return (
+                                        <Text style={styles.txtStartup}>
+                                            {value}
+                                        </Text>
+                                        )
+                                    })}
+                                </Row>
                             )
                         })}
-                    </View>
-                    <View style={styles.flexOne}>
-                        <Text style={styles.punishTitle}>Combo</Text>
+                    </Col> 
+
+                    <Col size={40}>
+                        <Text style={styles.punishTitle}> Combo</Text>
                         {combo.map((item,i) => {
                             return (
-                                <Text style={styles.txtCombo}>
-                                    {combo}
-                                </Text>
+                                <Row>
+                                    <Text key={i} style={styles.txtCombo}>
+                                        {item}
+                                    </Text>
+                                </Row>
                             )
                         })}
-                    </View>
-                </View>
+                    </Col> 
+
+                </Grid>
             </View>
             </> 
         )
@@ -120,12 +132,38 @@ const Guide = (props) => {
             )
         });
 
-        const mapper = () => {
-            
+        /* -- Same as below but functions
+        const dimensions = (arr) => {
+            return (
+                [arr.length,
+                arr.reduce((x, y) => Math.max(x, y.length), 0)]
+            )
+        };
+        */
 
-        }
+        const dimensions = [
+            rightData.length,
+            rightData.reduce((x, y) => Math.max(x, y.length), 0)
+        ];
+
+        const display = () => {
+            let div = [];
+            for(var i = 0; i < dimensions[1]; i++) {
+                div.push(
+                    <Col size={23}>
+                        {rightData.map((item) => {
+                            return (
+                                <Text key={item} style={styles.txtEnders}>
+                                    {item[i]}
+                                </Text>
+                            )
+                        })}
+                    </Col>
+                )
+            }
+            return div;
+        };
        
-
         return (
             <View style={styles.card}> 
                 <Text style={styles.title}> 
@@ -142,35 +180,8 @@ const Guide = (props) => {
                         })}
                     </Col> 
 
-                    <Col size={23} >
-                        {rightData.map((item,i) => {
-                            return (
-                                <Text key={i} style={styles.txtEnders}>
-                                    {item[0]}
-                                </Text>
-                            )
-                        })}
-                    </Col> 
-
-                    <Col size={23} >
-                        {rightData.map((item,i) => {
-                            return (
-                                <Text key={i} style={styles.txtEnders}>
-                                    {item[1]}
-                                </Text>
-                            )
-                        })}
-                    </Col> 
-
-                    <Col size={23}>
-                        {rightData.map((item,i) => {
-                            return (
-                                <Text key={i} style={styles.txtEnders}>
-                                    {item[2]}
-                                </Text>
-                            )
-                        })}
-                    </Col> 
+                    {display()}
+                    
                 </Grid>
             </View>
         )
@@ -203,7 +214,9 @@ const Guide = (props) => {
                     <Col size={size}>
                         {data.map((item) => {
                             return (
-                                <Text style={styles.txtEnders}>{item[i]}</Text>
+                                <Text key={item} style={styles.txtEnders}>
+                                    {item[i]}
+                                </Text>
                             )
                         })}
                     </Col>
@@ -212,7 +225,6 @@ const Guide = (props) => {
             return div;
         };
         
-
         return (
             <>
             <View style={styles.card}> 
@@ -234,7 +246,8 @@ const Guide = (props) => {
                 <StandPunishLayout title="Standing Punishers" data={data.standingPunishers} />
                 <StandPunishLayout title="Crouching Punishers" data={data.crouchingPunishers} />
                 <KeyMovesLayout title="Whiff Punishers" data={data.whiffPunishers} />
-                {/* <ComboLayout title="Standard Combos" data={data.standardCombos} /> */}
+                <ComboLayout title="Standard Combos" data={data.standardCombos} />
+                <ComboLayout title="Small Combos" data={data.smallCombos} />
                 <ComboEnderLayout title="Combo Enders" data={data.comboEnders} />
                 <WallComboLayout title="Wall Combos" data={data.wallCombos} />
         
@@ -281,13 +294,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         flexWrap: "wrap",
     },
-    flexOne:{
-        flex: 1,
-        justifyContent: 'flex-end',
-    },
-    flexTwo:{
-        flex: 1,
-        justifyContent: 'flex-start',
+    flexWrap:{
+        flexWrap: "wrap",
     },
     title: {
         color: '#ffff33',
@@ -324,6 +332,12 @@ const styles = StyleSheet.create({
         color:'#ffff33',
         fontFamily: 'ZenKurenaido',
         marginVertical: 6,
+        marginHorizontal: 7,
+    },
+    txtStartup: {
+        color:'#ffff33',
+        fontFamily: 'ZenKurenaido',
+        marginTop: 6,
         marginLeft: 5,
     },
     txtEnders: {

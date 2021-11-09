@@ -6,4 +6,12 @@
     <item>
         <bitmap android:src="@mipmap/bootsplash_logo" android:gravity="center" />
     </item>
+
+
+    <!-- Activate this if want to use fullscreen splash must have asset in drawable folder-->
+    <!-- <item>
+        <bitmap
+            android:src="@drawable/background"
+            android:gravity="fill" />
+    </item> -->
 </layer-list>

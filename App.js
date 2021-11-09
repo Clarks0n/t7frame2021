@@ -1,4 +1,4 @@
-import React from 'react';
+import React , {useEffect} from 'react';
 import { StatusBar, useColorScheme } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -19,7 +19,6 @@ const App = () => {
   };
   */
 
-  /*
   useEffect(() => {
     const init = async () => {
       // …do multiple sync or async tasks
@@ -30,8 +29,7 @@ const App = () => {
       console.log("Bootsplash has been hidden successfully");
     });
   }, []);
-  */
-
+  
   const isDarkMode = useColorScheme() === 'dark';
 
   const headerOptions = {
@@ -48,7 +46,7 @@ const App = () => {
   return (
     <Provider store={store} >
       <SafeAreaProvider>
-        <NavigationContainer onReady={() => RNBootSplash.hide()} >
+        <NavigationContainer >
           <StatusBar 
             barStyle={isDarkMode ? 'light-content' : 'dark-content'} 
             // backgroundColor='#fff'

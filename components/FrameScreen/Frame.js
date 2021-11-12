@@ -1,7 +1,7 @@
 import React , {useEffect} from 'react';
 import { View,StyleSheet, ScrollView } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { Table, TableWrapper, Row } from 'react-native-table-component';
+import { Table, Row } from 'react-native-table-component';
 
 const Frame = (props) => {
     

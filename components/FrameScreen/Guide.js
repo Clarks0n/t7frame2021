@@ -242,12 +242,9 @@ const styles = StyleSheet.create({
     },
     tableBorder : {
         borderWidth: 1, 
-        borderColor: '#c8e1ff'
+        borderColor: '#616161'
     }
-   
-  
 });
-
 
 export default Guide
 

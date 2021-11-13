@@ -22,7 +22,8 @@ const Details = ({route}) => {
         },
         tabBarIndicatorStyle: {
             backgroundColor: '#ffff33'
-        }
+        },
+        swipeEnabled: false
     };
 
     return (

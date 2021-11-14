@@ -7,7 +7,7 @@ import RNBootSplash from "react-native-bootsplash";
 
 import Home from './screens/Home';
 import Details from './screens/Details';
-import BackExit from './hooks/BackExit';
+// import BackExit from './hooks/BackExit';
 
 const Stack = createNativeStackNavigator();
 
@@ -29,6 +29,8 @@ const App = () => {
     });
   }, []);
 
+  /* 
+  //Back to Exit --BUGGY in react native 
   useEffect(() => {
     const backHandler = BackHandler.addEventListener(
       "hardwareBackPress",
@@ -36,7 +38,9 @@ const App = () => {
     );
 
     return () => backHandler.remove();
+
   },[]);
+  */
   
   const isDarkMode = useColorScheme() === 'dark';
 

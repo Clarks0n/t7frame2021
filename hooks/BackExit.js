@@ -6,11 +6,11 @@ const BackExit = () => {
     if (Platform.OS === "ios") return;
 
     count++;
-
     if(count === 1) {
         ToastAndroid.show(
             "Press back again to close!",
-            ToastAndroid.SHORT
+            ToastAndroid.SHORT,
+            ToastAndroid.BOTTOM,
         );
     } else {
         BackHandler.exitApp();

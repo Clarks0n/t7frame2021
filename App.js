@@ -1,5 +1,5 @@
 import React , {useEffect} from 'react';
-import { StatusBar, useColorScheme } from 'react-native';
+import { StatusBar, useColorScheme, BackHandler } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
@@ -7,6 +7,7 @@ import RNBootSplash from "react-native-bootsplash";
 
 import Home from './screens/Home';
 import Details from './screens/Details';
+import BackExit from './hooks/BackExit';
 
 const Stack = createNativeStackNavigator();
 
@@ -27,6 +28,15 @@ const App = () => {
       console.log("Bootsplash has been hidden successfully");
     });
   }, []);
+
+  useEffect(() => {
+    const backHandler = BackHandler.addEventListener(
+      "hardwareBackPress",
+      BackExit
+    );
+
+    return () => backHandler.remove();
+  },[]);
   
   const isDarkMode = useColorScheme() === 'dark';
 
